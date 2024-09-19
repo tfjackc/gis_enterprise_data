@@ -1,6 +1,6 @@
 FROM jupyter/base-notebook:latest
 
-RUN mamba install -c conda-forge leafmap geopandas localtileserver beautifulsoup4 plotly networkx pandas -y && \
+RUN mamba install -c conda-forge plotly networkx pandas -y && \
     fix-permissions "${CONDA_DIR}" && \
     fix-permissions "/home/${NB_USER}"
 
